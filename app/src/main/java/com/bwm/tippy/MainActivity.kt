@@ -10,6 +10,9 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 
+
+private const val INITIAL_TIP_PERCENT = 15
+
 class MainActivity : AppCompatActivity() {
     private lateinit var edBaseAmount: EditText
     private lateinit var skTip: SeekBar
@@ -55,6 +58,10 @@ class MainActivity : AppCompatActivity() {
                 computeTipTotal()
             }
         })
+
+        skTip.progress = INITIAL_TIP_PERCENT
+        tvTipPercLabel.text = "$INITIAL_TIP_PERCENT%"
+        updateTipDescription(INITIAL_TIP_PERCENT)
     }
 
     private fun updateTipDescription(tipPercentage: Int) {
