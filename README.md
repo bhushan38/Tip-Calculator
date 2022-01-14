@@ -1,4 +1,4 @@
-# Tippy
+# Tip Calculator
 
 https://color.adobe.com/create/color-wheel
 
